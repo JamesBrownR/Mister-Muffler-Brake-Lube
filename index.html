@@ -816,19 +816,321 @@ const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID';
 
 // Sample reviews data - replace with real reviews
 const reviewsData = [
-  { name: "Sarah Johnson", rating: 5, body: "Excellent service! Fixed my brake issue quickly and at a fair price. Highly recommend!" },
-  { name: "Mike Rodriguez", rating: 5, body: "Been coming here for years. Always honest, reliable, and professional. Best shop in town!" },
-  { name: "Jennifer Smith", rating: 5, body: "Great customer service and quality work. They explained everything clearly and finished on time." },
-  { name: "David Chen", rating: 5, body: "Fair pricing and expert service. Fixed my muffler problem perfectly. Will definitely return!" },
-  { name: "Lisa Thompson", rating: 5, body: "Professional staff and quick turnaround. My car runs like new after their service." },
-  { name: "Robert Wilson", rating: 5, body: "Trustworthy mechanics who do quality work. They've serviced my family's cars for over 10 years." },
-  { name: "Amanda Davis", rating: 5, body: "Fast oil change service and they checked all my fluids. Great attention to detail!" },
-  { name: "Kevin Martinez", rating: 5, body: "Had my alignment done here - car drives perfectly straight now. Professional and efficient." },
-  { name: "Rachel Brown", rating: 5, body: "Honest diagnosis and fair pricing. They didn't try to sell me unnecessary services." },
-  { name: "Tom Anderson", rating: 5, body: "Emergency brake repair handled quickly. Got me back on the road safely. Thank you!" },
-  { name: "Maria Garcia", rating: 5, body: "Clean shop, friendly staff, and excellent workmanship. Highly recommend to everyone!" },
-  { name: "James Taylor", rating: 5, body: "Best muffler shop in Stillwater! Quality parts and expert installation. Very satisfied." },
-  { name: "Nicole White", rating: 5, body: "Great service from start to finish. They explained the repair process and kept me informed." }
+  {
+    "name": "Tanner Litle",
+    "rating": 5,
+    "body": "After calling all the dealerships and alignment shops in Stillwater, Mr Muffler was the only shop that could align my car, everyone else said my car was too low and it couldn’t be done."
+  },
+  {
+    "name": "Chad Mahler",
+    "rating": 5,
+    "body": "This place is fantastic. They got our car fixed right away and it didn't cost an arm and a leg. Highly recommended! Thanks for the great service!"
+  },
+  {
+    "name": "Michelle Easton",
+    "rating": 5,
+    "body": "They did a fantastic job with the exhaust on my Malibu. Their pricing is great too, always upfront. I will definitely be bringing any of our vehicles to them for exhaust work and oil changes. Thank you for a job well-done!"
+  },
+  {
+    "name": "Ehsan Moallem",
+    "rating": 5,
+    "body": "They are great! Very quick and professional. Very reasonable price. Every time I bring any of my cars there, they do such a good job and they give me such a low quote. I am more than 100% satisfied every time. I am definitely a returning customer."
+  },
+  {
+    "name": "Cliff Bullock",
+    "rating": 5,
+    "body": "In and out fast Thank You, old time service with a Smile give them a call"
+  },
+  {
+    "name": "Rod Zachary",
+    "rating": 5,
+    "body": "Honesty and Integrity, out of town needed a quick diagnosis and got me in quick and did a five minute fix and tried not to accept any payment. Would definitely recommend these guys for any job, big or small."
+  },
+  {
+    "name": "Shooter Tutor",
+    "rating": 5,
+    "body": "I have used this company many times and have been happy with the service. Had soft brakes in my wife's vehicle, took it to him. He called me back…"
+  },
+  {
+    "name": "Micah Baker",
+    "rating": 5,
+    "body": "The crew was super friendly. They provided excellent, fast, and affordable work! My car is lowered and they knew, and had the resources to get it on the lift perfectly without damaging anything! Will definitely be coming back anytime I need more work done."
+  },
+  {
+    "name": "Ehsan Foroutan",
+    "rating": 5,
+    "body": "My car's flex pipe in the exhaust system was rusted and needs to get replaced. I found Mister Muffler based on the recommendations of other mechanics. He did a great job and was also fair in service price. He was also so fast. I would recommend you to have an appointment with him."
+  },
+  {
+    "name": "okbridges",
+    "rating": 5,
+    "body": "I have been going to Mr Muffler since 2007 and Justin has always done top notch work. He has installed exhaust kits, done total front end rebuilds, and custom alignments and I have never been more satisfied. I recommend this shop to anyone needing quality work at a good price."
+  },
+  {
+    "name": "Stephen Farley",
+    "rating": 5,
+    "body": "Went in for an estimate on a new muffler and was out within an hour with it installed. More than half the price of other estimates! Employees were super nice and the work quality is top notch. Recommending to everybody I know."
+  },
+  {
+    "name": "Brendan Pearce",
+    "rating": 5,
+    "body": "Excellent work. I had an exhaust leak, and he was able to cut, repair and weld in a timely manner. We also told me everything he was doing and made sure I understood what I was paying for. Overall, a very good experience"
+  },
+  {
+    "name": "Charles Kinzie",
+    "rating": 5,
+    "body": "I went to Janzen for a ball joint inspection and quote after being told my ball joints were going out(bad squeaking noise when I would turn or go over a big bump). They gave me a $1300 quote and offered to sell me another vehicle and trade…"
+  },
+  {
+    "name": "Bobby Stillman",
+    "rating": 5,
+    "body": "This is a classic type of shop. I went in fully expecting to get reamed over a malfunction in my rear exhaust flange. Instead he gave me a simple solution he could do, and fixed it with me in and out in 30 minutes. Excellent people, excellent service."
+  },
+  {
+    "name": "Marshall Addington",
+    "rating": 5,
+    "body": "Staff is very friendly and does good work. Went to get some exhaust tips welded on my car. He quoted me at $30 and that's exactly what i paid. Was in and out in about 45 minutes. Definitely recommend to anyone needing exhaust work in Stillwater."
+  },
+  {
+    "name": "Jake Smith",
+    "rating": 5,
+    "body": "Amazing service on last minute work! Would recommend to anybody in the Stillwater area! For those wondering what I had done. Mid-muffler delete. The weld was flawless. Thank you so much!"
+  },
+  {
+    "name": "Carri Camp",
+    "rating": 5,
+    "body": "The Bumble Bee transformed my Blessed to GRATEFUL. I truly never had service this fast. AND it came to less than estimated <$. THANK YOU DADDY FOR RECOMMENDING G&M♡ I 2nd that to everyone 👍"
+  },
+  {
+    "name": "Sharon Simon",
+    "rating": 5,
+    "body": "Their service is amazing. Justin really is a great guy and genuinely seems to care for his customers. I would recommend Mister Muffler to anyone living in the Stillwater area."
+  },
+  {
+    "name": "Mark Jimenez",
+    "rating": 5,
+    "body": "Great place to have car/truck suspension or wheel alignment done. Tech did super job an told me of other possible parts failure. Will continue to go here A++++"
+  },
+  {
+    "name": "Carl Bush",
+    "rating": 5,
+    "body": "Chris and Justin were very helpful and knowledgeable. Great place to do business reasonably priced! I highly recommend if you're in Stillwater and needing their service."
+  },
+  {
+    "name": "Shawn Shaw",
+    "rating": 5,
+    "body": "Great shop, good prices, excellent customer service, they go beyond anything to make sure you’re satisfied with their work! I highly recommend them personally! I’d give them 10 stars but Google only allows 5 stars"
+  },
+  {
+    "name": "Gary Fazio",
+    "rating": 5,
+    "body": "Justin and Chris are friendly, honest and do quality work at a fair price. They go the second mile to insure great customer service and your satisfaction."
+  },
+  {
+    "name": "AK Forsberg",
+    "rating": 5,
+    "body": "Justin is such a good guy. I had an exhaust problem. He fixed it in minutes, and the cost was so minimal I cried! Other places quoted me (a single woman) that the entire exhaust and muffler system must be replaced, for hundreds of…"
+  },
+  {
+    "name": "Bradley Dixon",
+    "rating": 5,
+    "body": "Very customer friendly environment. The exhaust work I had done is top notch and very well priced. I will definitely be recommending this place to my friends."
+  },
+  {
+    "name": "Randall Smith",
+    "rating": 5,
+    "body": "Excellent service and price. Justin was able to fix the exhaust on my Traverse instead of replacing expensive parts."
+  },
+  {
+    "name": "Nat Hoo",
+    "rating": 5,
+    "body": "Great service and quality work. Justin is great. I've been there multiple times and always happy with the work they do. This is the only place I'll go for exhaust work in Stillwater."
+  },
+  {
+    "name": "Rob Pigg",
+    "rating": 5,
+    "body": "Super nice and fast crew! Acknowledged me before I could even get out of car! Took time to not just tell me but show me what needed fixed. Great customer service!"
+  },
+  {
+    "name": "Taffi Davenport",
+    "rating": 5,
+    "body": "Visiting from out of state. Called and spoke with Chris who was super friendly and knowledgeable. Took us in immediately and quickly fixed the issue to get us back on the road. I highly recommend!"
+  },
+  {
+    "name": "B Hawkins",
+    "rating": 5,
+    "body": "Honest mechanic, A+ Customer service!"
+  },
+  {
+    "name": "Heather Hyde",
+    "rating": 5,
+    "body": "Took my car here for brake replacement. Very friendly and professional. Highly recommend."
+  },
+  {
+    "name": "Brandon Pertile",
+    "rating": 5,
+    "body": "I have went here for all my exhaust work (3 times) and have had great experiences every time. This is easily the best place to take your car or truck's exhaust needs in town."
+  },
+  {
+    "name": "Kolby Aiken",
+    "rating": 5,
+    "body": "Great place! I have taken my car there a few times and each time they have been super nice and helpful and do excellent work!"
+  },
+  {
+    "name": "Black Sanatra",
+    "rating": 5,
+    "body": "Call an talk with a guy nice customer service..took my 74 Buick in Thursday mid day they had It done next day little after closing time...stayed after closing time to keep his word that it would be done Friday......amazing service an work .... highly recommended"
+  },
+  {
+    "name": "JW W",
+    "rating": 5,
+    "body": "Got a free assessment for a muffler, and they presented options and weren't pushy about going for the most expensive one. They seemed most interested in what was best for me the customer."
+  },
+  {
+    "name": "shiva kanth Chary",
+    "rating": 5,
+    "body": "Good place if you have some car repairs. Friendly people and explain you everything very clearly and give you the best deal."
+  },
+  {
+    "name": "Dustin Kunnanz",
+    "rating": 5,
+    "body": "Fair, Honest, Reliable, Trustworthy, Quality Work, and Great Customer Service! Can’t say enough about these guys."
+  },
+  {
+    "name": "Walter Gongara",
+    "rating": 5,
+    "body": "Great work, great price,great experience.."
+  },
+  {
+    "name": "Calvin jordon",
+    "rating": 5,
+    "body": "Dropped my car off to have a muffler Installed and was ready within a few hours with no appointment. This is the second time I've gone to them for exhaust work and will continue to."
+  },
+  {
+    "name": "Darlene Caldwell Hall",
+    "rating": 5,
+    "body": "Very honest and helpful. Came highly recommended and earned it!"
+  },
+  {
+    "name": "Lizzy Carter",
+    "rating": 5,
+    "body": "Run by honest people. Quick and high quality service. Definitely recommend!"
+  },
+  {
+    "name": "delbert swan",
+    "rating": 5,
+    "body": "Had pipes installed, great job, they know what their doing"
+  },
+  {
+    "name": "James Niles",
+    "rating": 5,
+    "body": "Great service and knowledgeable. Justin always takes care of me."
+  },
+  {
+    "name": "Chad D",
+    "rating": 5,
+    "body": "Wonderful shop. Knowledgeable and friendly staff. Fair prices."
+  },
+  {
+    "name": "Udaya DeSilva",
+    "rating": 5,
+    "body": "Excellent service. Friendly folks. Reasonable turn-about time."
+  },
+  {
+    "name": "Vanessa Decker",
+    "rating": 5,
+    "body": "Great experience. Affordable and professional. Highly recommend."
+  },
+  {
+    "name": "Blayke Elliott",
+    "rating": 5,
+    "body": "Outstanding shop, highly recommend!"
+  },
+  {
+    "name": "Matt Dawes",
+    "rating": 5,
+    "body": "Very helpful staff, you won't go wrong going here."
+  },
+  {
+    "name": "Antonietta Pellegrino",
+    "rating": 5,
+    "body": "Very friendly owner excellent work"
+  },
+  {
+    "name": "Omara Peter",
+    "rating": 5,
+    "body": "Warm reception, good advice and quick service"
+  },
+  {
+    "name": "Brad W.",
+    "rating": 5,
+    "body": "Very helpful and professional."
+  },
+  {
+    "name": "Dillon Hicks",
+    "rating": 5,
+    "body": "Great price and service!"
+  },
+  {
+    "name": "Thomas",
+    "rating": 5,
+    "body": "Great work and customer service"
+  },
+  {
+    "name": "Zachary Whitehead",
+    "rating": 5,
+    "body": "Really nice people, cheap"
+  },
+  {
+    "name": "Nick Nease",
+    "rating": 5,
+    "body": "Great work! Great guys!"
+  },
+  {
+    "name": "Robby Bunch",
+    "rating": 5,
+    "body": "Great service and price"
+  },
+  {
+    "name": "Quincy Livingston",
+    "rating": 5,
+    "body": "Great service."
+  },
+  {
+    "name": "Dylan James",
+    "rating": 5,
+    "body": "Great turnaround!"
+  },
+  {
+    "name": "Tresia Easom",
+    "rating": 5,
+    "body": "Very reasonable"
+  },
+  {
+    "name": "Cathy Parham",
+    "rating": 4,
+    "body": "Helpful, nice, and knowledgeable."
+  },
+  {
+    "name": "Susan Rich (NitroNaNa)",
+    "rating": 4,
+    "body": "Great work"
+  },
+  {
+    "name": "Ri Mo",
+    "rating": 3,
+    "body": "He needs mabor classes the old man act like he dont have time for you."
+  },
+  {
+    "name": "DBM Prod",
+    "rating": 2,
+    "body": "Weld wire hanging off of the weld and holes big enough you can see light through them. Had to remove and fully reweld myself, don't waste your time."
+  },
+  {
+    "name": "Shirley Powers",
+    "rating": 1,
+    "body": "Had an alignment done. Drove home car drove worse than before alignment"
+  }
 ];
 
 // Reviews display logic
