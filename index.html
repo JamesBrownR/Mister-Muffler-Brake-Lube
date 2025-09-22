@@ -163,16 +163,10 @@
 
   /* Main Layout */
   main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 32px;
     margin-bottom: 40px;
-  }
-
-  @media (max-width: 1024px) {
-    main {
-      grid-template-columns: 1fr;
-    }
   }
 
   /* Card Styles */
@@ -313,12 +307,7 @@
     transform: scale(1.05);
   }
 
-  /* Sidebar */
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
+  /* Sidebar - no longer needed as separate styles */
 
   /* Hours Table */
   .hours-table {
@@ -748,24 +737,34 @@
         <!-- Quick Contact -->
         <div class="card animate-fade-in">
           <h3>📞 Quick Contact</h3>
-          <div style="margin-bottom: 16px;">
-            <strong>Phone</strong><br>
-            <a class="call-now" href="tel:+14053729500" style="margin-top: 8px; display: inline-flex;">
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">Get in touch with us for all your automotive service needs. We're here to help!</p>
+          
+          <div style="margin-bottom: 24px;">
+            <strong style="display: block; margin-bottom: 8px; color: var(--text-primary);">📱 Phone</strong>
+            <a class="call-now" href="tel:+14053729500" style="margin-bottom: 8px; display: inline-flex;">
               📞 (405) 372-9500
             </a>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 0;">Call us for appointments or questions</p>
           </div>
           
-          <div style="margin-bottom: 16px;">
-            <strong>Email</strong><br>
-            <a href="mailto:info@mistermuffler.com" style="color: var(--text-secondary);">info@mistermuffler.com</a>
+          <div style="margin-bottom: 24px;">
+            <strong style="display: block; margin-bottom: 8px; color: var(--text-primary);">✉️ Email</strong>
+            <a href="mailto:info@mistermuffler.com" style="color: var(--accent-secondary); text-decoration: none; font-weight: 500;">info@mistermuffler.com</a>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Send us your questions anytime</p>
           </div>
           
-          <div>
-            <strong>Address</strong><br>
-            <address style="color: var(--text-secondary); font-style: normal; line-height: 1.5;">
+          <div style="margin-bottom: 24px;">
+            <strong style="display: block; margin-bottom: 8px; color: var(--text-primary);">📍 Address</strong>
+            <address style="color: var(--text-secondary); font-style: normal; line-height: 1.6;">
               408 E 9th Ave<br>
               Stillwater, OK 74074
             </address>
+            <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Easy to find on East 9th Avenue</p>
+          </div>
+          
+          <div style="padding: 16px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-sm);">
+            <strong style="color: var(--success); display: block; margin-bottom: 4px;">⚡ Same-Day Service Available</strong>
+            <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Most repairs completed while you wait</p>
           </div>
         </div>
       </aside>
