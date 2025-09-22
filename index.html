@@ -56,7 +56,7 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
     box-shadow: var(--shadow-lg);
     display: flex;
     align-items: center;
@@ -165,8 +165,8 @@
   main {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    margin-bottom: 40px;
+    gap: 64px;
+    margin-bottom: 64px;
   }
 
   /* Card Styles */
@@ -175,7 +175,7 @@
     backdrop-filter: blur(20px);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 24px;
+    padding: 32px;
     box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
   }
@@ -186,7 +186,7 @@
   }
 
   .card h2, .card h3 {
-    margin: 0 0 16px 0;
+    margin: 0 0 24px 0;
     color: var(--text-primary);
   }
 
@@ -202,13 +202,13 @@
 
   /* Hero Section */
   .hero {
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 
   .hero-text {
     font-size: 18px;
     color: var(--text-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     line-height: 1.7;
   }
 
@@ -216,7 +216,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
 
   .badge {
@@ -238,16 +238,16 @@
   /* Services Grid */
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin: 24px 0;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
   }
 
   .service-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 20px;
+    padding: 24px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: default;
@@ -260,8 +260,8 @@
   }
 
   .service-icon {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 12px;
     display: block;
   }
 
@@ -274,7 +274,7 @@
 
   /* Map Section */
   .map-container {
-    margin: 24px 0;
+    margin: 32px 0;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -306,8 +306,6 @@
   .gallery img:hover {
     transform: scale(1.05);
   }
-
-  /* Sidebar - no longer needed as separate styles */
 
   /* Hours Table */
   .hours-table {
@@ -479,7 +477,7 @@
     border-radius: var(--radius-lg);
     padding: 32px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 64px;
   }
 
   .footer-content {
@@ -522,6 +520,7 @@
     header {
       flex-direction: column;
       text-align: center;
+      margin-bottom: 32px;
     }
     
     .brand {
@@ -533,8 +532,18 @@
       font-size: 20px;
     }
     
+    .card {
+      padding: 24px;
+    }
+    
+    main {
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
     .services-grid {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
     
     .gallery {
@@ -544,6 +553,10 @@
     .footer-content {
       grid-template-columns: 1fr;
       text-align: center;
+    }
+    
+    footer {
+      margin-top: 40px;
     }
   }
 
@@ -626,10 +639,6 @@
               <span class="service-icon">🛞</span>
               <h4>Tire Service</h4>
             </div>
-            <div class="service-card">
-              <span class="service-icon">🔍</span>
-              <h4>Inspections</h4>
-            </div>
           </div>
         </div>
 
@@ -647,8 +656,6 @@
             </iframe>
           </div>
         </div>
-
-
 
         <!-- Contact Form -->
         <div class="card animate-fade-in">
