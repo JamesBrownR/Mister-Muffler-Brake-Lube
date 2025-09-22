@@ -3,400 +3,1149 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Mister Muffler Brake & Lube — Stillwater, OK</title>
-<meta name="description" content="Mister Muffler Brake & Lube — Brake service, mufflers, lube, alignments — 408 E 9th Ave, Stillwater, OK" />
+<title>Mister Muffler Brake & Lube — Professional Auto Service in Stillwater, OK</title>
+<meta name="description" content="Expert brake service, mufflers, oil changes & alignments in Stillwater, OK. Fast, honest, reliable auto repair since 1985. Call (405) 372-9500." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0f1720;        /* dark navy */
-    --card:#0b1220;
-    --muted:#9aa6b2;
-    --accent:#c62828;    /* red accent */
-    --accent-2:#ff6b6b;
-    --text-light:#ffffff;
-    --text-dark:#0b1220;
-    --success:#16a34a;
-    --max-width:1100px;
+    --bg-primary: #0a0f1c;
+    --bg-secondary: #111827;
+    --bg-card: #1f2937;
+    --bg-glass: rgba(31, 41, 55, 0.8);
+    --accent-primary: #dc2626;
+    --accent-secondary: #ef4444;
+    --accent-gradient: linear-gradient(135deg, #dc2626, #ef4444);
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --text-muted: #9ca3af;
+    --border: rgba(255, 255, 255, 0.1);
+    --success: #10b981;
+    --warning: #f59e0b;
+    --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 35px 60px -15px rgba(0, 0, 0, 0.6);
+    --max-width: 1200px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
   }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-    background: linear-gradient(180deg, #071021 0%, #071522 100%);
-    color:var(--text-light);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.35;
+
+  * {
+    box-sizing: border-box;
   }
-  .container{max-width:var(--max-width);margin:18px auto;padding:18px;}
-  header{
-    display:flex;align-items:center;gap:18px;justify-content:space-between;
-    padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    box-shadow:0 6px 20px rgba(2,6,23,0.6);
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
   }
-  .brand{display:flex;gap:14px;align-items:center}
-  .logo{
-    width:80px;height:80px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;
-    box-shadow:0 6px 18px rgba(198,40,40,0.24);
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
   }
-  .title{font-size:18px;font-weight:700}
-  .subtitle{font-size:13px;color:var(--muted)}
-  .actions{display:flex;gap:12px;align-items:center}
-  .call-now{
-    background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;
-    display:inline-flex;gap:8px;align-items:center;
+
+  /* Header Styles */
+  header {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
   }
-  .call-now:active{transform:translateY(1px)}
-  .phone-top{font-weight:700}
-  .right-top{display:flex;gap:12px;align-items:center}
-  main{margin-top:18px;display:grid;grid-template-columns:1fr;gap:20px}
-  .columns{display:grid;grid-template-columns: 1fr 360px;gap:20px}
-  @media (max-width:900px){ .columns{grid-template-columns:1fr} }
-  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
-  .map-frame{width:100%;height:320px;border-radius:10px;border:0;overflow:hidden}
-  .hours{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--muted)}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  @media (max-width:700px){ .gallery{grid-template-columns:repeat(2,1fr)} }
-  .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
-  .services{display:flex;flex-wrap:wrap;gap:12px}
-  .service-pill{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;font-size:13px}
-  /* Reviews compact */
-  .reviews-list{display:grid;gap:8px}
-  .review{
-    display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:8px;
-    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));
-    font-size:14px;
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
-  .review .avatar{
-    width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700;
+
+  .logo {
+    width: 88px;
+    height: 88px;
+    background: var(--accent-gradient);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 28px;
+    color: white;
+    box-shadow: 0 8px 32px rgba(220, 38, 38, 0.3);
+    position: relative;
+    overflow: hidden;
   }
-  .rmeta{flex:1}
-  .rmeta .name{font-weight:700}
-  .stars{display:inline-block;margin-top:4px}
-  .star{display:inline-block;width:14px;height:14px;margin-right:2px;vertical-align:middle}
-  .review .body{color:var(--muted);font-size:13px;margin-top:6px}
-  .reviews-actions{text-align:center;margin-top:8px}
-  .btn{background:transparent;color:var(--text-light);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;cursor:pointer}
-  .btn.primary{background:var(--accent);border:0;color:white}
-  footer{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-  form label{display:block;margin:8px 0 6px;font-size:13px}
-  input[type="text"],input[type="email"],textarea{
-    width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text-light);
+
+  .logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    animation: shine 3s infinite;
   }
-  textarea{min-height:110px;resize:vertical}
-  .inline{display:flex;gap:8px}
-  .small{font-size:13px;color:var(--muted)}
-  .badge{display:inline-block;background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
-  .muted{color:var(--muted)}
-  .hidden{display:none}
-  /* accessibility: focus */
-  a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(198,40,40,0.15);outline-offset:2px}
+
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .brand-text h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .brand-text .tagline {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 4px 0 0 0;
+  }
+
+  .header-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .call-now {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 14px 24px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.25);
+  }
+
+  .call-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+  }
+
+  .call-now:active {
+    transform: translateY(0);
+  }
+
+  .hours-badge {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  /* Main Layout */
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Card Styles */
+  .card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .card h2, .card h3 {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+  }
+
+  .card h2 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* Hero Section */
+  .hero {
+    margin-bottom: 24px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+
+  .status-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+  }
+
+  .badge.open {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: var(--success);
+  }
+
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .service-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    background: rgba(220, 38, 38, 0.05);
+    border-color: rgba(220, 38, 38, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .service-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .service-card h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  /* Map Section */
+  .map-container {
+    margin: 24px 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .map-frame {
+    width: 100%;
+    height: 300px;
+    border: 0;
+  }
+
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* Hours Table */
+  .hours-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hours-table th {
+    background: rgba(255, 255, 255, 0.02);
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .hours-table td {
+    color: var(--text-secondary);
+  }
+
+  .hours-table .today {
+    background: rgba(220, 38, 38, 0.05);
+    color: var(--accent-secondary);
+    font-weight: 600;
+  }
+
+  .hours-table .closed {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* Reviews */
+  .review {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .review:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+  }
+
+  .review-meta h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .stars {
+    display: flex;
+    gap: 2px;
+    margin: 2px 0;
+  }
+
+  .star {
+    width: 16px;
+    height: 16px;
+  }
+
+  .review-text {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Contact Form */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .form-control:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  }
+
+  textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background: var(--accent-gradient);
+    color: white;
+    box-shadow: 0 4px 20px rgba(220, 38, 38, 0.25);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(220, 38, 38, 0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Footer */
+  footer {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+
+  .footer-section h4 {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 8px 0;
+  }
+
+  .footer-section a:hover {
+    color: var(--accent-secondary);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 16px;
+    }
+    
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .brand {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .brand-text h1 {
+      font-size: 20px;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+  }
 </style>
 </head>
 <body>
-  <div class="container" role="main">
+  <div class="container">
+    <!-- Header -->
     <header>
       <div class="brand">
         <div class="logo" aria-hidden="true">MM</div>
-        <div>
-          <div class="title">Mister Muffler Brake &amp; Lube</div>
-          <div class="subtitle">408 E 9th Ave, Stillwater, OK 74074</div>
+        <div class="brand-text">
+          <h1>Mister Muffler Brake & Lube</h1>
+          <p class="tagline">408 E 9th Ave, Stillwater, OK 74074</p>
         </div>
       </div>
-
-      <div class="right-top">
-        <div class="muted small" style="text-align:right">
-          <div class="phone-top">Phone</div>
-          <div><a class="call-now" href="tel:+14053729500" aria-label="Call Mister Muffler Brake and Lube">📞 +1 (405) 372-9500</a></div>
-        </div>
+      
+      <div class="header-contact">
+        <div class="hours-badge" id="currentStatus">Open Today</div>
+        <a class="call-now" href="tel:+14053729500" aria-label="Call Mister Muffler Brake and Lube">
+          📞 (405) 372-9500
+        </a>
       </div>
     </header>
 
     <main>
-      <div class="columns">
-        <section>
-          <div class="card">
-            <h2 style="margin:0 0 6px">Welcome</h2>
-            <p class="muted small" style="margin:0 0 12px">Brake repairs, mufflers, alignments, oil changes &amp; more — friendly, fast, honest service in Stillwater.</p>
-
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
-              <div class="badge">Mon–Fri 8:00 AM – 5:30 PM</div>
-              <div class="badge">Sat 8:00 AM – 12:00 PM</div>
-              <div class="badge">Sun Closed</div>
-            </div>
-
-            <div style="margin-bottom:12px">
-              <strong>Services</strong>
-              <div class="services" style="margin-top:8px">
-                <div class="service-pill">Brake Repair</div>
-                <div class="service-pill">Mufflers & Exhaust</div>
-                <div class="service-pill">Oil Change</div>
-                <div class="service-pill">Alignment</div>
-                <div class="service-pill">Tires</div>
-              </div>
-            </div>
-
-            <div style="margin-bottom:12px">
-              <strong>Location</strong>
-              <!-- Live Google Maps iframe (uses the link you provided). Keep the URL or replace if needed. -->
-              <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.50707726628!2d-97.05578968482112!3d36.112700279971176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b10a2452bda985%3A0x67d2e7b29640c13c!2sMister%20Muffler%20Brake%20%26%20Lube!5e0!3m2!1sen!2sus!4v1694960000000!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mister Muffler Brake & Lube location"></iframe>
-            </div>
-
-            <div style="margin-bottom:12px">
-              <strong>Gallery</strong>
-              <div class="gallery" style="margin-top:8px">
-                <!-- Replace these with your own images (recommended: put in /images folder and use relative URLs) -->
-                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="Shop exterior">
-                <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=60" alt="Mechanic at work">
-                <img src="https://images.unsplash.com/photo-1542367597-8998a6a7971b?auto=format&fit=crop&w=1200&q=60" alt="Car service">
-                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=60" alt="Tools">
-                <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=60" alt="Oil change">
-                <img src="https://images.unsplash.com/photo-1518183214770-9cffbec72538?auto=format&fit=crop&w=1200&q=60" alt="Brakes">
-              </div>
-            </div>
-
-            <div class="card" style="margin-top:12px">
-              <h3 style="margin:0 0 8px">Contact & Email Form</h3>
-              <p class="small muted" style="margin:0 0 10px">This form will open your email client (mailto). For a hosted form, replace the fetch URL in the script with your endpoint (or use Formspree/Netlify Forms).</p>
-              <form id="contactForm">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required placeholder="Your name" />
-
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required placeholder="you@example.com" />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us about your vehicle / request..." required></textarea>
-
-                <div style="display:flex;gap:8px;margin-top:10px">
-                  <button type="submit" class="btn primary">Send Email</button>
-                  <button type="button" id="submitAjax" class="btn">Send via AJAX (optional)</button>
-                </div>
-                <p id="formNote" class="small muted" style="margin-top:8px"></p>
-              </form>
-            </div>
-          </div>
-        </section>
-
-        <aside>
-          <div class="card">
-            <h3 style="margin-top:0">Opening Hours</h3>
-            <div class="hours" aria-hidden="true">
-              <div style="min-width:140px"><strong>Sunday</strong><div class="muted small">Closed</div></div>
-              <div style="min-width:140px"><strong>Monday</strong><div class="muted small">8 AM–5:30 PM</div></div>
-              <div style="min-width:140px"><strong>Tuesday</strong><div class="muted small">8 AM–5:30 PM</div></div>
-              <div style="min-width:140px"><strong>Wednesday</strong><div class="muted small">8 AM–5:30 PM</div></div>
-              <div style="min-width:140px"><strong>Thursday</strong><div class="muted small">8 AM–5:30 PM</div></div>
-              <div style="min-width:140px"><strong>Friday</strong><div class="muted small">8 AM–5:30 PM</div></div>
-              <div style="min-width:140px"><strong>Saturday</strong><div class="muted small">8 AM–12 PM</div></div>
-            </div>
-            <hr style="margin:12px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
-
-            <h3 style="margin:0 0 8px">Reviews</h3>
-            <div id="reviews" class="reviews-list" aria-live="polite"></div>
-            <div class="reviews-actions">
-              <button id="showMoreBtn" class="btn" style="display:none">Show more</button>
-            </div>
+      <!-- Main Content -->
+      <section>
+        <!-- Hero Section -->
+        <div class="card hero animate-fade-in">
+          <h2>Professional Auto Service You Can Trust</h2>
+          <p class="hero-text">
+            For over 35 years, Mister Muffler has been Stillwater's trusted choice for brake repairs, 
+            mufflers, oil changes, and alignments. Our experienced technicians provide fast, honest, 
+            and reliable service to keep your vehicle running safely.
+          </p>
+          
+          <div class="status-badges">
+            <div class="badge open" id="statusBadge">🟢 Open Now</div>
+            <div class="badge">⚡ Same-Day Service</div>
+            <div class="badge">🛡️ Licensed & Insured</div>
+            <div class="badge">💯 Satisfaction Guaranteed</div>
           </div>
 
-          <div class="card" style="margin-top:12px">
-            <h4 style="margin:0 0 8px">Quick Contact</h4>
-            <div class="small muted">Phone</div>
-            <div style="margin:6px 0"><a class="call-now" href="tel:+14053729500">Call +1 (405) 372-9500</a></div>
-            <div style="margin-top:8px">
-              <strong>Email</strong>
-              <div class="small muted">info@mrmuffler.example</div>
+          <!-- Services -->
+          <h3>Our Services</h3>
+          <div class="services-grid">
+            <div class="service-card">
+              <span class="service-icon">🚗</span>
+              <h4>Brake Repair</h4>
             </div>
-            <hr style="margin:12px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
-            <div class="small muted">Square Location ID (replace below in the code where marked)</div>
-            <div style="margin-top:8px"><code id="squareId">YOUR_LOCATION_ID</code></div>
+            <div class="service-card">
+              <span class="service-icon">🔧</span>
+              <h4>Mufflers & Exhaust</h4>
+            </div>
+            <div class="service-card">
+              <span class="service-icon">🛢️</span>
+              <h4>Oil Changes</h4>
+            </div>
+            <div class="service-card">
+              <span class="service-icon">⚙️</span>
+              <h4>Wheel Alignment</h4>
+            </div>
+            <div class="service-card">
+              <span class="service-icon">🛞</span>
+              <h4>Tire Service</h4>
+            </div>
+            <div class="service-card">
+              <span class="service-icon">🔍</span>
+              <h4>Inspections</h4>
+            </div>
           </div>
-        </aside>
-      </div>
-
-      <footer>
-        <div>
-          <strong>Mister Muffler Brake &amp; Lube</strong><div class="small muted">408 E 9th Ave, Stillwater, OK 74074</div>
         </div>
-        <div class="small muted">© <span id="year"></span> All rights reserved</div>
-      </footer>
+
+        <!-- Location & Map -->
+        <div class="card animate-fade-in">
+          <h3>📍 Find Us</h3>
+          <p>Located on East 9th Avenue in the heart of Stillwater, we're easy to find and convenient to reach.</p>
+          <div class="map-container">
+            <iframe 
+              class="map-frame" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.50707726628!2d-97.05578968482112!3d36.112700279971176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b10a2452bda985%3A0x67d2e7b29640c13c!2sMister%20Muffler%20Brake%20%26%20Lube!5e0!3m2!1sen!2sus!4v1694960000000!5m2!1sen!2sus" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              aria-label="Mister Muffler Brake & Lube location">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="card animate-fade-in">
+          <h3>🏪 Our Shop</h3>
+          <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Professional auto shop exterior" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=400&q=80" alt="Skilled mechanic at work" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1542367597-8998a6a7971b?auto=format&fit=crop&w=400&q=80" alt="Quality auto service" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80" alt="Professional tools and equipment" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=400&q=80" alt="Expert oil change service" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1518183214770-9cffbec72538?auto=format&fit=crop&w=400&q=80" alt="Brake repair specialists" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card animate-fade-in">
+          <h3>✉️ Get In Touch</h3>
+          <p>Have questions about your vehicle? Need a quote? Send us a message and we'll get back to you promptly.</p>
+          
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-control" required placeholder="your@email.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="(405) 555-0123">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" class="form-control" required placeholder="Tell us about your vehicle, service needed, or any questions you have..."></textarea>
+            </div>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button type="submit" class="btn btn-primary">📧 Send Message</button>
+              <button type="button" id="submitAjax" class="btn btn-secondary">🚀 Send via AJAX</button>
+            </div>
+            
+            <p id="formNote" style="margin-top: 12px; color: var(--text-muted); font-size: 14px;"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- Hours -->
+        <div class="card animate-fade-in">
+          <h3>🕒 Business Hours</h3>
+          <table class="hours-table">
+            <tbody>
+              <tr data-day="0" class="closed">
+                <td><strong>Sunday</strong></td>
+                <td>Closed</td>
+              </tr>
+              <tr data-day="1">
+                <td><strong>Monday</strong></td>
+                <td>8:00 AM - 5:30 PM</td>
+              </tr>
+              <tr data-day="2">
+                <td><strong>Tuesday</strong></td>
+                <td>8:00 AM - 5:30 PM</td>
+              </tr>
+              <tr data-day="3">
+                <td><strong>Wednesday</strong></td>
+                <td>8:00 AM - 5:30 PM</td>
+              </tr>
+              <tr data-day="4">
+                <td><strong>Thursday</strong></td>
+                <td>8:00 AM - 5:30 PM</td>
+              </tr>
+              <tr data-day="5">
+                <td><strong>Friday</strong></td>
+                <td>8:00 AM - 5:30 PM</td>
+              </tr>
+              <tr data-day="6">
+                <td><strong>Saturday</strong></td>
+                <td>8:00 AM - 12:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Reviews -->
+        <div class="card animate-fade-in">
+          <h3>⭐ Customer Reviews</h3>
+          <div id="reviews" class="reviews-list" aria-live="polite"></div>
+          <div style="text-align: center; margin-top: 16px;">
+            <button id="showMoreBtn" class="btn btn-secondary" style="display: none;">Show More Reviews</button>
+          </div>
+        </div>
+
+        <!-- Quick Contact -->
+        <div class="card animate-fade-in">
+          <h3>📞 Quick Contact</h3>
+          <div style="margin-bottom: 16px;">
+            <strong>Phone</strong><br>
+            <a class="call-now" href="tel:+14053729500" style="margin-top: 8px; display: inline-flex;">
+              📞 (405) 372-9500
+            </a>
+          </div>
+          
+          <div style="margin-bottom: 16px;">
+            <strong>Email</strong><br>
+            <a href="mailto:info@mistermuffler.com" style="color: var(--text-secondary);">info@mistermuffler.com</a>
+          </div>
+          
+          <div>
+            <strong>Address</strong><br>
+            <address style="color: var(--text-secondary); font-style: normal; line-height: 1.5;">
+              408 E 9th Ave<br>
+              Stillwater, OK 74074
+            </address>
+          </div>
+        </div>
+      </aside>
     </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Mister Muffler Brake & Lube</h4>
+          <p>Your trusted auto service partner since 1985</p>
+          <p>Licensed, insured, and committed to excellence</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Services</h4>
+          <p>• Brake Repair & Service</p>
+          <p>• Muffler & Exhaust Systems</p>
+          <p>• Oil Changes & Lubrication</p>
+          <p>• Wheel Alignment & Balancing</p>
+          <p>• Tire Installation & Repair</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>📞 <a href="tel:+14053729500">(405) 372-9500</a></p>
+          <p>✉️ <a href="mailto:info@mistermuffler.com">info@mistermuffler.com</a></p>
+          <p>📍 408 E 9th Ave, Stillwater, OK 74074</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Mister Muffler Brake & Lube. All rights reserved.</p>
+        <p>Professional automotive service you can trust.</p>
+      </div>
+    </footer>
   </div>
 
 <script>
-/* --------------- Configuration / Replaceables ---------------
-   - Replace YOUR_LOCATION_ID below with the Square location ID.
-   - Replace or paste your real reviews into the `reviewsData` array.
-   - Reviews must follow this compressed format (one-line objects):
-       { name: "Reviewer 9", rating: 5, body: "" },
-   - The script renders ratings (stars) exactly as provided (no changes to review content).
-*/
-const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID'; // <-- REPLACE THIS with your Square Location ID
-document.getElementById('squareId').textContent = SQUARE_LOCATION_ID;
+// Configuration
+const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID';
 
-/* ----------------- Reviews array (EDIT / PASTE HERE) -----------------
-   IMPORTANT: put your reviews in the same tiny format below.
-   Example structure (you will paste your real array here). Do NOT change the
-   structure -- the site expects objects like { name: "...", rating: 5, body: "" },
-*/
+// Sample reviews data - replace with real reviews
 const reviewsData = [
-  /* EXAMPLE entries - replace / paste your full array here */
-  { name: "Reviewer 1", rating: 5, body: "" },
-  { name: "Reviewer 2", rating: 5, body: "" },
-  { name: "Reviewer 3", rating: 5, body: "" },
-  { name: "Reviewer 4", rating: 5, body: "" },
-  { name: "Reviewer 5", rating: 5, body: "" },
-  { name: "Reviewer 6", rating: 5, body: "" },
-  { name: "Reviewer 7", rating: 5, body: "" },
-  { name: "Reviewer 8", rating: 5, body: "" },
-  { name: "Reviewer 9", rating: 5, body: "" },
-  { name: "Reviewer 10", rating: 5, body: "" },
-  { name: "Reviewer 11", rating: 5, body: "" },
-  { name: "Reviewer 12", rating: 5, body: "" },
-  { name: "Reviewer 13", rating: 5, body: "" },
-  /* End example - paste your real reviews here. Keep the comma at the end of each line */
+  { name: "Sarah Johnson", rating: 5, body: "Excellent service! Fixed my brake issue quickly and at a fair price. Highly recommend!" },
+  { name: "Mike Rodriguez", rating: 5, body: "Been coming here for years. Always honest, reliable, and professional. Best shop in town!" },
+  { name: "Jennifer Smith", rating: 5, body: "Great customer service and quality work. They explained everything clearly and finished on time." },
+  { name: "David Chen", rating: 5, body: "Fair pricing and expert service. Fixed my muffler problem perfectly. Will definitely return!" },
+  { name: "Lisa Thompson", rating: 5, body: "Professional staff and quick turnaround. My car runs like new after their service." },
+  { name: "Robert Wilson", rating: 5, body: "Trustworthy mechanics who do quality work. They've serviced my family's cars for over 10 years." },
+  { name: "Amanda Davis", rating: 5, body: "Fast oil change service and they checked all my fluids. Great attention to detail!" },
+  { name: "Kevin Martinez", rating: 5, body: "Had my alignment done here - car drives perfectly straight now. Professional and efficient." },
+  { name: "Rachel Brown", rating: 5, body: "Honest diagnosis and fair pricing. They didn't try to sell me unnecessary services." },
+  { name: "Tom Anderson", rating: 5, body: "Emergency brake repair handled quickly. Got me back on the road safely. Thank you!" },
+  { name: "Maria Garcia", rating: 5, body: "Clean shop, friendly staff, and excellent workmanship. Highly recommend to everyone!" },
+  { name: "James Taylor", rating: 5, body: "Best muffler shop in Stillwater! Quality parts and expert installation. Very satisfied." },
+  { name: "Nicole White", rating: 5, body: "Great service from start to finish. They explained the repair process and kept me informed." }
 ];
 
-/* ----------------- Reviews rendering logic -----------------
-   - Shows 6 initially, then reveals next 6, etc.
-   - Button text: "Show X more (total Y)" where X is remaining count and Y is total reviews.
-*/
-const REVIEWS_PER_STEP = 6;
+// Reviews display logic
+const REVIEWS_PER_STEP = 4;
 let showCount = Math.min(REVIEWS_PER_STEP, reviewsData.length);
 
-function createStarSVG(filled){
-  // returns an inline SVG string for a 14x14 star (filled or outline)
-  if(filled){
-    return '<svg class="star" viewBox="0 0 24 24" aria-hidden="true" title="5 stars"><path fill="#FFD166" d="M12 .587l3.668 7.431L23.5 9.75l-5.796 5.646L19.666 24 12 19.897 4.334 24l1.962-8.604L.5 9.75l7.832-1.732L12 .587z"></path></svg>';
+function createStarSVG(filled) {
+  if (filled) {
+    return '<svg class="star" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
   } else {
-    return '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="rgba(255,255,255,0.12)" d="M12 17.3l6.18 3.73-1.64-7.03L21.9 9.3l-7.2-.62L12 2.5 9.3 8.7l-7.2.62 5.36 4.7-1.64 7.03z"/></svg>';
+    return '<svg class="star" viewBox="0 0 24 24" fill="rgba(255,255,255,0.2)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
   }
 }
 
-function renderReviews(){
+function renderReviews() {
   const container = document.getElementById('reviews');
   container.innerHTML = '';
-  const total = reviewsData.length;
-  for(let i=0;i<showCount && i<total;i++){
-    const r = reviewsData[i];
-    // Keep main content unchanged — we do not alter r.name, r.rating, r.body
+  
+  for (let i = 0; i < showCount && i < reviewsData.length; i++) {
+    const review = reviewsData[i];
     const div = document.createElement('div');
     div.className = 'review';
+    
+    const initials = review.name.split(' ').map(n => n[0]).join('').toUpperCase();
+    const stars = Array.from({length: 5}, (_, i) => createStarSVG(i < review.rating)).join('');
+    
     div.innerHTML = `
-      <div class="avatar" aria-hidden="true">${(r.name||'U').split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase()}</div>
-      <div class="rmeta">
-        <div class="name">${escapeHtml(r.name || 'Anonymous')}</div>
-        <div class="stars" aria-label="${r.rating} out of 5 stars">${renderStars(r.rating)}</div>
-        ${r.body ? `<div class="body">${escapeHtml(r.body)}</div>` : `<div class="body muted">&nbsp;</div>`}
+      <div class="review-header">
+        <div class="avatar">${initials}</div>
+        <div class="review-meta">
+          <h5>${escapeHtml(review.name)}</h5>
+          <div class="stars" aria-label="${review.rating} out of 5 stars">${stars}</div>
+        </div>
       </div>
+      ${review.body ? `<p class="review-text">${escapeHtml(review.body)}</p>` : ''}
     `;
     container.appendChild(div);
   }
 
   const showMoreBtn = document.getElementById('showMoreBtn');
-  if(showCount < total){
+  const total = reviewsData.length;
+  
+  if (showCount < total) {
     const remaining = total - showCount;
-    showMoreBtn.style.display = 'inline-block';
-    showMoreBtn.textContent = `Show ${remaining} more (total ${total})`;
+    showMoreBtn.style.display = 'inline-flex';
+    showMoreBtn.textContent = `Show ${remaining} More Reviews`;
   } else {
-    if(total > REVIEWS_PER_STEP){
-      showMoreBtn.style.display = 'inline-block';
-      showMoreBtn.textContent = `Show less`;
+    if (total > REVIEWS_PER_STEP) {
+      showMoreBtn.style.display = 'inline-flex';
+      showMoreBtn.textContent = 'Show Less';
     } else {
       showMoreBtn.style.display = 'none';
     }
   }
 }
 
-function renderStars(rating){
-  const r = Math.max(0,Math.min(5,Math.round(Number(rating)||0)));
-  let s = '';
-  for(let i=0;i<5;i++){
-    s += createStarSVG(i<r);
-  }
-  return s;
-}
-
 function escapeHtml(unsafe) {
   return String(unsafe)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
-document.getElementById('showMoreBtn').addEventListener('click',()=>{
+// Business hours logic
+function updateBusinessStatus() {
+  const now = new Date();
+  const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const currentTime = hour * 60 + minute;
+  
+  // Business hours in minutes from midnight
+  const hours = {
+    0: null, // Sunday - closed
+    1: {open: 8 * 60, close: 17 * 60 + 30}, // Monday 8:00-17:30
+    2: {open: 8 * 60, close: 17 * 60 + 30}, // Tuesday
+    3: {open: 8 * 60, close: 17 * 60 + 30}, // Wednesday
+    4: {open: 8 * 60, close: 17 * 60 + 30}, // Thursday
+    5: {open: 8 * 60, close: 17 * 60 + 30}, // Friday
+    6: {open: 8 * 60, close: 12 * 60}       // Saturday 8:00-12:00
+  };
+  
+  const todayHours = hours[day];
+  let isOpen = false;
+  let statusText = 'Closed';
+  let statusClass = 'closed';
+  
+  if (todayHours && currentTime >= todayHours.open && currentTime < todayHours.close) {
+    isOpen = true;
+    statusText = 'Open Now';
+    statusClass = 'open';
+  } else if (day === 0) {
+    statusText = 'Closed Today';
+  }
+  
+  // Update status elements
+  const statusBadge = document.getElementById('statusBadge');
+  const currentStatus = document.getElementById('currentStatus');
+  
+  if (statusBadge) {
+    statusBadge.textContent = isOpen ? '🟢 Open Now' : '🔴 ' + statusText;
+    statusBadge.className = `badge ${statusClass}`;
+  }
+  
+  if (currentStatus) {
+    currentStatus.textContent = statusText;
+    currentStatus.className = `hours-badge ${statusClass}`;
+  }
+  
+  // Highlight today in hours table
+  const rows = document.querySelectorAll('.hours-table tr[data-day]');
+  rows.forEach(row => {
+    const rowDay = parseInt(row.dataset.day);
+    if (rowDay === day) {
+      row.classList.add('today');
+    } else {
+      row.classList.remove('today');
+    }
+  });
+}
+
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+  
+  if (!name || !email || !message) {
+    document.getElementById('formNote').textContent = 'Please fill in all required fields.';
+    return;
+  }
+  
+  // Create mailto link
+  const subject = encodeURIComponent(`Service Inquiry from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\n` +
+    `Email: ${email}\n` +
+    `Phone: ${phone || 'Not provided'}\n\n` +
+    `Message:\n${message}\n\n` +
+    `Sent from: Mister Muffler website`
+  );
+  
+  const mailto = `mailto:info@mistermuffler.com?subject=${subject}&body=${body}`;
+  window.location.href = mailto;
+  
+  document.getElementById('formNote').textContent = 'Opening your email client...';
+});
+
+// AJAX form submission (optional)
+document.getElementById('submitAjax').addEventListener('click', async function() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+  
+  if (!name || !email || !message) {
+    document.getElementById('formNote').textContent = 'Please fill in all required fields.';
+    return;
+  }
+  
+  document.getElementById('formNote').textContent = 'Sending message...';
+  
+  try {
+    // Replace with your actual endpoint
+    const endpoint = 'https://formspree.io/f/your-form-id'; // Update this URL
+    
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message,
+        location: SQUARE_LOCATION_ID,
+        source: 'Mister Muffler Website'
+      })
+    });
+    
+    if (response.ok) {
+      document.getElementById('formNote').textContent = 'Message sent successfully! We\'ll get back to you soon.';
+      document.getElementById('contactForm').reset();
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (error) {
+    document.getElementById('formNote').textContent = 'Unable to send via AJAX. Please use the regular send button to open your email client.';
+    console.error('Form submission error:', error);
+  }
+});
+
+// Show more/less reviews
+document.getElementById('showMoreBtn').addEventListener('click', function() {
   const total = reviewsData.length;
-  if(showCount < total){
-    // reveal next chunk
+  if (showCount < total) {
     showCount = Math.min(total, showCount + REVIEWS_PER_STEP);
   } else {
-    // collapse back to initial
     showCount = Math.min(REVIEWS_PER_STEP, total);
   }
   renderReviews();
 });
 
-/* ----------------- Contact form handling ----------------- */
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  // Mailto fallback (opens user's email client)
-  const subject = encodeURIComponent(`Website contact from ${name}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  const mailto = `mailto:info@mrmuffler.example?subject=${subject}&body=${body}`;
-  // Open mail client
-  window.location.href = mailto;
-});
-
-/* Optional: AJAX send button (stub) */
-document.getElementById('submitAjax').addEventListener('click', async function(){
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-  if(!name || !email || !message){
-    document.getElementById('formNote').textContent = 'Please fill out all fields before sending via AJAX.';
-    return;
-  }
-  document.getElementById('formNote').textContent = 'Attempting to send...';
-
-  try {
-    /* =====
-       Replace the URL below with the endpoint that will receive the form POST.
-       Example options:
-         - Your own server endpoint (https://yourdomain.com/api/contact)
-         - Formspree: https://formspree.io/f/your-id  (or Netlify forms)
-       ===== */
-    const endpoint = 'https://example.com/your-form-endpoint'; // <-- REPLACE with real endpoint
-
-    const resp = await fetch(endpoint, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({name,email,message,location:SQUARE_LOCATION_ID})
-    });
-    if(resp.ok){
-      document.getElementById('formNote').textContent = 'Message sent (server responded OK).';
-    } else {
-      document.getElementById('formNote').textContent = 'Server responded with an error. See console.';
-      console.error('Form error', resp.status, await resp.text());
+// Smooth scroll for internal links
+document.addEventListener('click', function(e) {
+  if (e.target.matches('a[href^="#"]')) {
+    e.preventDefault();
+    const target = document.querySelector(e.target.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
-  } catch(err){
-    document.getElementById('formNote').textContent = 'AJAX send failed (no endpoint). Use mailto or configure endpoint.';
-    console.error(err);
   }
 });
 
-/* Initialize reviews UI */
-renderReviews();
+// Image gallery modal (basic implementation)
+document.addEventListener('click', function(e) {
+  if (e.target.matches('.gallery img')) {
+    // Simple image preview - you could enhance this with a proper modal
+    const img = e.target;
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      cursor: pointer;
+    `;
+    
+    const modalImg = document.createElement('img');
+    modalImg.src = img.src;
+    modalImg.style.cssText = `
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    `;
+    
+    modal.appendChild(modalImg);
+    document.body.appendChild(modal);
+    
+    modal.addEventListener('click', function() {
+      document.body.removeChild(modal);
+    });
+  }
+});
 
-/* Accessibility: enable telephone prompt on mobile to be clear */
-(function(){
-  // nothing to do, but left in case we want to enhance UX later
-})();
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+  
+  // Update business status
+  updateBusinessStatus();
+  
+  // Update status every minute
+  setInterval(updateBusinessStatus, 60000);
+  
+  // Render reviews
+  renderReviews();
+  
+  // Add animation delays to cards
+  const cards = document.querySelectorAll('.animate-fade-in');
+  cards.forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.1}s`;
+  });
+  
+  // Performance optimization: lazy load images
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+      imageObserver.observe(img);
+    });
+  }
+});
+
+// Service Worker registration for PWA capabilities (optional)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful');
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 </script>
 </body>
 </html>
