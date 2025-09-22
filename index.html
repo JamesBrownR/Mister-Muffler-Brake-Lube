@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mister Muffler Brake & Lube — Stillwater, OK</title>
+<meta name="description" content="Mister Muffler Brake & Lube — Brake service, mufflers, lube, alignments — 408 E 9th Ave, Stillwater, OK" />
+<style>
+  :root{
+    --bg:#0f1720;        /* dark navy */
+    --card:#0b1220;
+    --muted:#9aa6b2;
+    --accent:#c62828;    /* red accent */
+    --accent-2:#ff6b6b;
+    --text-light:#ffffff;
+    --text-dark:#0b1220;
+    --success:#16a34a;
+    --max-width:1100px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background: linear-gradient(180deg, #071021 0%, #071522 100%);
+    color:var(--text-light);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.35;
+  }
+  .container{max-width:var(--max-width);margin:18px auto;padding:18px;}
+  header{
+    display:flex;align-items:center;gap:18px;justify-content:space-between;
+    padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow:0 6px 20px rgba(2,6,23,0.6);
+  }
+  .brand{display:flex;gap:14px;align-items:center}
+  .logo{
+    width:80px;height:80px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#fff;
+    box-shadow:0 6px 18px rgba(198,40,40,0.24);
+  }
+  .title{font-size:18px;font-weight:700}
+  .subtitle{font-size:13px;color:var(--muted)}
+  .actions{display:flex;gap:12px;align-items:center}
+  .call-now{
+    background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;
+    display:inline-flex;gap:8px;align-items:center;
+  }
+  .call-now:active{transform:translateY(1px)}
+  .phone-top{font-weight:700}
+  .right-top{display:flex;gap:12px;align-items:center}
+  main{margin-top:18px;display:grid;grid-template-columns:1fr;gap:20px}
+  .columns{display:grid;grid-template-columns: 1fr 360px;gap:20px}
+  @media (max-width:900px){ .columns{grid-template-columns:1fr} }
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
+  .map-frame{width:100%;height:320px;border-radius:10px;border:0;overflow:hidden}
+  .hours{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--muted)}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  @media (max-width:700px){ .gallery{grid-template-columns:repeat(2,1fr)} }
+  .gallery img{width:100%;height:120px;object-fit:cover;border-radius:8px}
+  .services{display:flex;flex-wrap:wrap;gap:12px}
+  .service-pill{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;font-size:13px}
+  /* Reviews compact */
+  .reviews-list{display:grid;gap:8px}
+  .review{
+    display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:8px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));
+    font-size:14px;
+  }
+  .review .avatar{
+    width:42px;height:42px;border-radius:8px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+  .rmeta{flex:1}
+  .rmeta .name{font-weight:700}
+  .stars{display:inline-block;margin-top:4px}
+  .star{display:inline-block;width:14px;height:14px;margin-right:2px;vertical-align:middle}
+  .review .body{color:var(--muted);font-size:13px;margin-top:6px}
+  .reviews-actions{text-align:center;margin-top:8px}
+  .btn{background:transparent;color:var(--text-light);border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;cursor:pointer}
+  .btn.primary{background:var(--accent);border:0;color:white}
+  footer{margin-top:18px;padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  form label{display:block;margin:8px 0 6px;font-size:13px}
+  input[type="text"],input[type="email"],textarea{
+    width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text-light);
+  }
+  textarea{min-height:110px;resize:vertical}
+  .inline{display:flex;gap:8px}
+  .small{font-size:13px;color:var(--muted)}
+  .badge{display:inline-block;background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;font-weight:700}
+  .muted{color:var(--muted)}
+  .hidden{display:none}
+  /* accessibility: focus */
+  a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(198,40,40,0.15);outline-offset:2px}
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">MM</div>
+        <div>
+          <div class="title">Mister Muffler Brake &amp; Lube</div>
+          <div class="subtitle">408 E 9th Ave, Stillwater, OK 74074</div>
+        </div>
+      </div>
+
+      <div class="right-top">
+        <div class="muted small" style="text-align:right">
+          <div class="phone-top">Phone</div>
+          <div><a class="call-now" href="tel:+14053729500" aria-label="Call Mister Muffler Brake and Lube">📞 +1 (405) 372-9500</a></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="columns">
+        <section>
+          <div class="card">
+            <h2 style="margin:0 0 6px">Welcome</h2>
+            <p class="muted small" style="margin:0 0 12px">Brake repairs, mufflers, alignments, oil changes &amp; more — friendly, fast, honest service in Stillwater.</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+              <div class="badge">Mon–Fri 8:00 AM – 5:30 PM</div>
+              <div class="badge">Sat 8:00 AM – 12:00 PM</div>
+              <div class="badge">Sun Closed</div>
+            </div>
+
+            <div style="margin-bottom:12px">
+              <strong>Services</strong>
+              <div class="services" style="margin-top:8px">
+                <div class="service-pill">Brake Repair</div>
+                <div class="service-pill">Mufflers & Exhaust</div>
+                <div class="service-pill">Oil Change</div>
+                <div class="service-pill">Alignment</div>
+                <div class="service-pill">Tires</div>
+              </div>
+            </div>
+
+            <div style="margin-bottom:12px">
+              <strong>Location</strong>
+              <!-- Live Google Maps iframe (uses the link you provided). Keep the URL or replace if needed. -->
+              <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.50707726628!2d-97.05578968482112!3d36.112700279971176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b10a2452bda985%3A0x67d2e7b29640c13c!2sMister%20Muffler%20Brake%20%26%20Lube!5e0!3m2!1sen!2sus!4v1694960000000!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Mister Muffler Brake & Lube location"></iframe>
+            </div>
+
+            <div style="margin-bottom:12px">
+              <strong>Gallery</strong>
+              <div class="gallery" style="margin-top:8px">
+                <!-- Replace these with your own images (recommended: put in /images folder and use relative URLs) -->
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="Shop exterior">
+                <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=60" alt="Mechanic at work">
+                <img src="https://images.unsplash.com/photo-1542367597-8998a6a7971b?auto=format&fit=crop&w=1200&q=60" alt="Car service">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=60" alt="Tools">
+                <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1200&q=60" alt="Oil change">
+                <img src="https://images.unsplash.com/photo-1518183214770-9cffbec72538?auto=format&fit=crop&w=1200&q=60" alt="Brakes">
+              </div>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h3 style="margin:0 0 8px">Contact & Email Form</h3>
+              <p class="small muted" style="margin:0 0 10px">This form will open your email client (mailto). For a hosted form, replace the fetch URL in the script with your endpoint (or use Formspree/Netlify Forms).</p>
+              <form id="contactForm">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required placeholder="Your name" />
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your vehicle / request..." required></textarea>
+
+                <div style="display:flex;gap:8px;margin-top:10px">
+                  <button type="submit" class="btn primary">Send Email</button>
+                  <button type="button" id="submitAjax" class="btn">Send via AJAX (optional)</button>
+                </div>
+                <p id="formNote" class="small muted" style="margin-top:8px"></p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin-top:0">Opening Hours</h3>
+            <div class="hours" aria-hidden="true">
+              <div style="min-width:140px"><strong>Sunday</strong><div class="muted small">Closed</div></div>
+              <div style="min-width:140px"><strong>Monday</strong><div class="muted small">8 AM–5:30 PM</div></div>
+              <div style="min-width:140px"><strong>Tuesday</strong><div class="muted small">8 AM–5:30 PM</div></div>
+              <div style="min-width:140px"><strong>Wednesday</strong><div class="muted small">8 AM–5:30 PM</div></div>
+              <div style="min-width:140px"><strong>Thursday</strong><div class="muted small">8 AM–5:30 PM</div></div>
+              <div style="min-width:140px"><strong>Friday</strong><div class="muted small">8 AM–5:30 PM</div></div>
+              <div style="min-width:140px"><strong>Saturday</strong><div class="muted small">8 AM–12 PM</div></div>
+            </div>
+            <hr style="margin:12px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
+
+            <h3 style="margin:0 0 8px">Reviews</h3>
+            <div id="reviews" class="reviews-list" aria-live="polite"></div>
+            <div class="reviews-actions">
+              <button id="showMoreBtn" class="btn" style="display:none">Show more</button>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 8px">Quick Contact</h4>
+            <div class="small muted">Phone</div>
+            <div style="margin:6px 0"><a class="call-now" href="tel:+14053729500">Call +1 (405) 372-9500</a></div>
+            <div style="margin-top:8px">
+              <strong>Email</strong>
+              <div class="small muted">info@mrmuffler.example</div>
+            </div>
+            <hr style="margin:12px 0;border:0;border-top:1px solid rgba(255,255,255,0.03)">
+            <div class="small muted">Square Location ID (replace below in the code where marked)</div>
+            <div style="margin-top:8px"><code id="squareId">YOUR_LOCATION_ID</code></div>
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div>
+          <strong>Mister Muffler Brake &amp; Lube</strong><div class="small muted">408 E 9th Ave, Stillwater, OK 74074</div>
+        </div>
+        <div class="small muted">© <span id="year"></span> All rights reserved</div>
+      </footer>
+    </main>
+  </div>
+
+<script>
+/* --------------- Configuration / Replaceables ---------------
+   - Replace YOUR_LOCATION_ID below with the Square location ID.
+   - Replace or paste your real reviews into the `reviewsData` array.
+   - Reviews must follow this compressed format (one-line objects):
+       { name: "Reviewer 9", rating: 5, body: "" },
+   - The script renders ratings (stars) exactly as provided (no changes to review content).
+*/
+const SQUARE_LOCATION_ID = 'YOUR_LOCATION_ID'; // <-- REPLACE THIS with your Square Location ID
+document.getElementById('squareId').textContent = SQUARE_LOCATION_ID;
+
+/* ----------------- Reviews array (EDIT / PASTE HERE) -----------------
+   IMPORTANT: put your reviews in the same tiny format below.
+   Example structure (you will paste your real array here). Do NOT change the
+   structure -- the site expects objects like { name: "...", rating: 5, body: "" },
+*/
+const reviewsData = [
+  /* EXAMPLE entries - replace / paste your full array here */
+  { name: "Reviewer 1", rating: 5, body: "" },
+  { name: "Reviewer 2", rating: 5, body: "" },
+  { name: "Reviewer 3", rating: 5, body: "" },
+  { name: "Reviewer 4", rating: 5, body: "" },
+  { name: "Reviewer 5", rating: 5, body: "" },
+  { name: "Reviewer 6", rating: 5, body: "" },
+  { name: "Reviewer 7", rating: 5, body: "" },
+  { name: "Reviewer 8", rating: 5, body: "" },
+  { name: "Reviewer 9", rating: 5, body: "" },
+  { name: "Reviewer 10", rating: 5, body: "" },
+  { name: "Reviewer 11", rating: 5, body: "" },
+  { name: "Reviewer 12", rating: 5, body: "" },
+  { name: "Reviewer 13", rating: 5, body: "" },
+  /* End example - paste your real reviews here. Keep the comma at the end of each line */
+];
+
+/* ----------------- Reviews rendering logic -----------------
+   - Shows 6 initially, then reveals next 6, etc.
+   - Button text: "Show X more (total Y)" where X is remaining count and Y is total reviews.
+*/
+const REVIEWS_PER_STEP = 6;
+let showCount = Math.min(REVIEWS_PER_STEP, reviewsData.length);
+
+function createStarSVG(filled){
+  // returns an inline SVG string for a 14x14 star (filled or outline)
+  if(filled){
+    return '<svg class="star" viewBox="0 0 24 24" aria-hidden="true" title="5 stars"><path fill="#FFD166" d="M12 .587l3.668 7.431L23.5 9.75l-5.796 5.646L19.666 24 12 19.897 4.334 24l1.962-8.604L.5 9.75l7.832-1.732L12 .587z"></path></svg>';
+  } else {
+    return '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="rgba(255,255,255,0.12)" d="M12 17.3l6.18 3.73-1.64-7.03L21.9 9.3l-7.2-.62L12 2.5 9.3 8.7l-7.2.62 5.36 4.7-1.64 7.03z"/></svg>';
+  }
+}
+
+function renderReviews(){
+  const container = document.getElementById('reviews');
+  container.innerHTML = '';
+  const total = reviewsData.length;
+  for(let i=0;i<showCount && i<total;i++){
+    const r = reviewsData[i];
+    // Keep main content unchanged — we do not alter r.name, r.rating, r.body
+    const div = document.createElement('div');
+    div.className = 'review';
+    div.innerHTML = `
+      <div class="avatar" aria-hidden="true">${(r.name||'U').split(' ').map(s=>s[0]).slice(0,2).join('').toUpperCase()}</div>
+      <div class="rmeta">
+        <div class="name">${escapeHtml(r.name || 'Anonymous')}</div>
+        <div class="stars" aria-label="${r.rating} out of 5 stars">${renderStars(r.rating)}</div>
+        ${r.body ? `<div class="body">${escapeHtml(r.body)}</div>` : `<div class="body muted">&nbsp;</div>`}
+      </div>
+    `;
+    container.appendChild(div);
+  }
+
+  const showMoreBtn = document.getElementById('showMoreBtn');
+  if(showCount < total){
+    const remaining = total - showCount;
+    showMoreBtn.style.display = 'inline-block';
+    showMoreBtn.textContent = `Show ${remaining} more (total ${total})`;
+  } else {
+    if(total > REVIEWS_PER_STEP){
+      showMoreBtn.style.display = 'inline-block';
+      showMoreBtn.textContent = `Show less`;
+    } else {
+      showMoreBtn.style.display = 'none';
+    }
+  }
+}
+
+function renderStars(rating){
+  const r = Math.max(0,Math.min(5,Math.round(Number(rating)||0)));
+  let s = '';
+  for(let i=0;i<5;i++){
+    s += createStarSVG(i<r);
+  }
+  return s;
+}
+
+function escapeHtml(unsafe) {
+  return String(unsafe)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+document.getElementById('showMoreBtn').addEventListener('click',()=>{
+  const total = reviewsData.length;
+  if(showCount < total){
+    // reveal next chunk
+    showCount = Math.min(total, showCount + REVIEWS_PER_STEP);
+  } else {
+    // collapse back to initial
+    showCount = Math.min(REVIEWS_PER_STEP, total);
+  }
+  renderReviews();
+});
+
+/* ----------------- Contact form handling ----------------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Mailto fallback (opens user's email client)
+  const subject = encodeURIComponent(`Website contact from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+  const mailto = `mailto:info@mrmuffler.example?subject=${subject}&body=${body}`;
+  // Open mail client
+  window.location.href = mailto;
+});
+
+/* Optional: AJAX send button (stub) */
+document.getElementById('submitAjax').addEventListener('click', async function(){
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  if(!name || !email || !message){
+    document.getElementById('formNote').textContent = 'Please fill out all fields before sending via AJAX.';
+    return;
+  }
+  document.getElementById('formNote').textContent = 'Attempting to send...';
+
+  try {
+    /* =====
+       Replace the URL below with the endpoint that will receive the form POST.
+       Example options:
+         - Your own server endpoint (https://yourdomain.com/api/contact)
+         - Formspree: https://formspree.io/f/your-id  (or Netlify forms)
+       ===== */
+    const endpoint = 'https://example.com/your-form-endpoint'; // <-- REPLACE with real endpoint
+
+    const resp = await fetch(endpoint, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({name,email,message,location:SQUARE_LOCATION_ID})
+    });
+    if(resp.ok){
+      document.getElementById('formNote').textContent = 'Message sent (server responded OK).';
+    } else {
+      document.getElementById('formNote').textContent = 'Server responded with an error. See console.';
+      console.error('Form error', resp.status, await resp.text());
+    }
+  } catch(err){
+    document.getElementById('formNote').textContent = 'AJAX send failed (no endpoint). Use mailto or configure endpoint.';
+    console.error(err);
+  }
+});
+
+/* Initialize reviews UI */
+renderReviews();
+
+/* Accessibility: enable telephone prompt on mobile to be clear */
+(function(){
+  // nothing to do, but left in case we want to enhance UX later
+})();
+</script>
+</body>
+</html>
